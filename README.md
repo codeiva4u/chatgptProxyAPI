@@ -44,41 +44,40 @@ https://openai-proxy-api.pages.dev/api
 ***
 
 
-## 使用CloudFlare Pages进行中转
+## Use CloudFlare Pages for transit
 
-### 1、部署中转API+ Openai API余额查询 (使用sess-xxxx的Authorization查询，有效时间未知)
+### 1. Deploy transfer API + Openai API balance query (use Authorization query of sess-xxxx, the validity time is unknown)
 
-> [官方文档](https://developers.cloudflare.com/pages)
+> [Official Documentation](https://developers.cloudflare.com/pages)
 
-1. ~~Fork本项目~~ 点击[Use this template](https://github.com/x-dr/chatgptProxyAPI/generate)按钮创建一个新的代码库。
-2. 登录到[Cloudflare](https://dash.cloudflare.com/)控制台.
-3. 在帐户主页中，选择`pages`> ` Create a project` > `Connect to Git`
-4. 选择你 Fork 的项目存储库，在`Set up builds and deployments`部分中，全部默认即可。
-
-
-5. 点击`Save and Deploy`部署，然后点`Continue to project`即可看到访问域名
+1. ~~Fork this project~~ Click the [Use this template](https://github.com/x-dr/chatgptProxyAPI/generate) button to create a new code base.
+2. Log in to the [Cloudflare](https://dash.cloudflare.com/) console.
+3. From the account home page, select `pages`> `Create a project` > `Connect to Git`
+4. Select the project repository for your Fork, and in the `Set up builds and deployments` section, leave everything as default.
 
 
-> 把官方接口的`https://api.openai.com`替换为`https://xxx.pages.dev` 即可
+5. Click `Save and Deploy` to deploy, then click `Continue to project` to see the access domain name
+
+
+> Replace the official interface `https://api.openai.com` with `https://xxx.pages.dev`
 
 **Demo**
 
 [https://chatai.451024.xyz](https://chatai.451024.xyz)
 
-**[详细教程](./docs/cloudflare_pages.md)**
+**[Detailed Tutorial](./docs/cloudflare_pages.md)**
+
+### 2. Only deploy the transit API
 
 
-### 2、只部署中转API
-
-
-**[详细教程](./docs/cloudflare_proxy_pages.md)**
+**[Detailed Tutorial](./docs/cloudflare_proxy_pages.md)**
 
 
 
 
-## docker 部署（要境外vps） 
+## docker deployment (requires overseas vps)
 
-> 好像不支持sse 所以不建议
+> It seems that sse is not supported so it is not recommended.
 
 <details>
 
@@ -91,7 +90,7 @@ docker run -itd --name openaiproxy \
            gindex/openaiproxy:latest
 ```
 
-#### 使用
+#### use
 
 *api : http://vpsip:3000/proxy/v1/chat/completions*
 
