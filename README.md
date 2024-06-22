@@ -1,4 +1,4 @@
-*经测试有些ip访问时会显示下图*
+*After testing, some IPs will display the following picture when accessing*
 
 <img src="https://image.3001.net/images/20231116/1700131811_6555f3e30a1efc2db761f.png" height="50%" width="50%" /></a>
 
@@ -20,29 +20,28 @@ https://openai-proxy-api.pages.dev/api
 ```
 ***
 
->  新项目 [基于OpenAI的微信机器人](https://github.com/x-dr/wechat-bot)
+> New project [WeChat robot based on OpenAI](https://github.com/x-dr/wechat-bot)
 
 ***
 
-### 演示站为公共服务，如有大规模使用需求请自行部署，演示站有点不堪重负
+### The demo site is a public service. If you need large-scale use, please deploy it yourself. The demo site is a bit overwhelmed.
 
 ![worker](./docs/img/worker.png)
 
 
-## 利用Cloudflare Worker中转api.openai.com
+## Use Cloudflare Worker to transfer api.openai.com
 
-1. 新建一个 Cloudflare Worker
-2. 复制 [cf_worker.js](https://cdn.jsdelivr.net/gh/x-dr/chatgptProxyAPI@main/cf_worker.js)  里的代码粘贴到 Worker 中并部署
-3. 给 Worker 绑定一个没有被墙的域名
-4. 使用自己的域名代替 api.openai.com
+1. Create a new Cloudflare Worker
+2. Copy the code in [cf_worker.js](https://cdn.jsdelivr.net/gh/x-dr/chatgptProxyAPI@main/cf_worker.js) and paste it into Worker and deploy it
+3. Bind the Worker to a domain name that is not blocked
+4. Use your own domain name instead of api.openai.com
 
 
-**[详细教程](./docs/cloudflare_workers.md)**
+**[Detailed Tutorial](./docs/cloudflare_workers.md)**
 
 
 
 ***
-
 
 
 ## 使用CloudFlare Pages进行中转
